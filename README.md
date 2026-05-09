@@ -22,13 +22,16 @@ The project follows a clean architecture approach with separate layers for scala
 ---
 
 ## 📁 Project Structure
+
+```text
 VehicleManagementSystem/
 │
-├── VehicleManagementSystem.AngularClient # Frontend (Angular)
-├── VehicleManagementSystem.API # Backend API (Controllers, DB)
-├── VehicleManagementSystem.Application # Business logic layer
-├── VehicleManagementSystem.Domain # Entities / Models
-├── VehicleManagementSystem.Infrastructure # Data access / EF Core
+├── VehicleManagementSystem.AngularClient   # Frontend (Angular)
+├── VehicleManagementSystem.API             # Backend API (Controllers, DB)
+├── VehicleManagementSystem.Application     # Business logic layer
+├── VehicleManagementSystem.Domain          # Entities / Models
+├── VehicleManagementSystem.Infrastructure  # Data access / EF Core
+```
 
 ---
 
