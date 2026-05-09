@@ -1,0 +1,57 @@
+<div *ngIf="vehicle as v; else noData" class="details-container">
+  <img [src]="'http://localhost:5248' + vehicle.imageUrl" alt="vehicle image" />
+  <div class="details-info">
+    <h1>{{ v.brand }}</h1>
+    <h2>{{ v.model }}</h2>
+    <h3>Rs. {{ v.price.toLocaleString() }}</h3>
+    <p><strong>Year:</strong> {{ v.year }}</p>
+    <p><strong>Fuel:</strong> {{ v.fuelType }}</p>
+    <p><strong>Color:</strong> {{ v.color }}</p>
+    <p><strong>Mileage:</strong> {{ v.mileage }}</p>
+    <p><strong>Reg:</strong> {{ v.registrationNumber }}</p>
+  </div>
+</div>
+<ng-template #noData>
+  <p>Vehicle Not Loaded</p>
+</ng-template>
+
+<!-- <div *ngIf="vehicle !== null; else noData">
+  <h1>{{ vehicle.brand }}</h1>
+  <h2>{{ vehicle.model }}</h2>
+  <p>{{ vehicle.price }}</p>
+  <p>{{ vehicle | json }}</p>
+</div>
+
+<ng-template #noData>
+  <p>Vehicle not loaded</p>
+</ng-template> -->
+
+<!-- <div *ngIf="vehicle" class="details-container">
+
+  <img
+    [src]="'http://localhost:5248' + vehicle.imageUrl"
+  >
+
+  <div class="details-info">
+
+    <h1>
+      {{ vehicle.brand }} {{ vehicle.model }}
+    </h1>
+
+    <h2>
+      Rs. {{ vehicle.price.toLocaleString() }}
+    </h2>
+
+    <p><strong>Year:</strong> {{ vehicle.year }}</p>
+
+    <p><strong>Fuel:</strong> {{ vehicle.fuelType }}</p>
+
+    <p><strong>Color:</strong> {{ vehicle.color }}</p>
+
+    <p><strong>Mileage:</strong> {{ vehicle.mileage }}</p>
+
+    <p><strong>Registration:</strong> {{ vehicle.registrationNumber }}</p>
+
+  </div>
+
+</div> -->

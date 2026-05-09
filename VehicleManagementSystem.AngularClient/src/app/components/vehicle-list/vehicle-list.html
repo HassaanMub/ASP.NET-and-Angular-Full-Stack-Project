@@ -1,0 +1,40 @@
+<div class="vehicle-container">
+  <div class="vehicle-card" *ngFor="let vehicle of vehicles" [routerLink]="['/products', vehicle.id]">
+    <img *ngIf="vehicle.imageUrl" [src]="'http://localhost:5248' + vehicle.imageUrl"/>
+    <div class="vehicle-info">
+      <h2 class="price"> Rs. {{ vehicle.price.toLocaleString() }} </h2>
+      <h3 class="brand">
+        {{ vehicle.brand }}
+        <p>-</p> 
+        <p class="model">
+        {{ vehicle.model }}
+        </p>
+      </h3>
+      <p class="time">
+        {{vehicle.createdAt}}
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="vehicle-container">
+
+  <div class="vehicle-card" *ngFor="let vehicle of vehicles">
+
+    <img
+      *ngIf="vehicle.imageUrl"
+      [src]="'http://localhost:5248' + vehicle.imageUrl"
+      width="200"
+    />
+
+    <h2>{{ vehicle.brand }} {{ vehicle.model }}</h2>
+
+    <p><strong>Year:</strong> {{ vehicle.year }}</p>
+    <p><strong>Color:</strong> {{ vehicle.color }}</p>
+    <p><strong>Fuel:</strong> {{ vehicle.fuelType }}</p>
+    <p><strong>Mileage:</strong> {{ vehicle.mileage }}</p>
+    <p><strong>Price:</strong> {{ vehicle.price }}</p>
+
+  </div>
+
+</div> -->

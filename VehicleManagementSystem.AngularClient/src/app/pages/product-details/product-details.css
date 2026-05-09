@@ -1,0 +1,16 @@
+.details-container{
+    display:flex;
+    gap:40px;
+    padding:40px;
+    align-items:flex-start;
+}
+.details-container img{
+    width:500px;
+    border-radius:20px;
+}
+.details-info{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    width:500px;
+}
