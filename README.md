@@ -106,6 +106,4 @@ http://localhost:4200
 ## 👨‍💻 Author
 
 Built as a learning project for full-stack development using Angular + ASP.NET Core.
-
-```
 ---
