@@ -22,53 +22,13 @@ export class ProductDetails implements OnInit {
     private cdr: ChangeDetectorRef
   ) {}
   ngOnInit(): void {
-
-  this.route.paramMap.subscribe(params => {
-
-    const id = Number(params.get('id'));
-
-    this.vehicle = null;
-
-    this.vehicleService.getVehicleById(id).subscribe(data => {
-
-      this.vehicle = data;
-
-      this.cdr.detectChanges(); // 🔥 FORCE UI REFRESH
-
+    this.route.paramMap.subscribe(params => {
+      const id = Number(params.get('id'));
+      this.vehicle = null;
+      this.vehicleService.getVehicleById(id).subscribe(data => {
+        this.vehicle = data;
+        this.cdr.detectChanges();
+      });
     });
-
-  });
-
+  }
 }
-}
-//   ngOnInit(): void {
-//   this.route.paramMap.subscribe(params => {
-//     const id = Number(params.get('id'));
-//     console.log("NEW ROUTE ID:", id);
-//     this.vehicle = null; // IMPORTANT reset state
-//     this.vehicleService.getVehicleById(id).subscribe(data => {
-//       this.vehicle = data;
-//       console.log("LOADED VEHICLE:", data);
-//     });
-//   });
-// }
-  // ngOnInit(): void {
-  //   this.route.paramMap.subscribe(params => {
-  //     const id = Number(params.get('id'));
-  //     this.vehicleService.getVehicleById(id).subscribe(data => {
-  //       this.vehicle = data;
-  //     });
-  //   });
-  // }
-  // ngOnInit(): void {
-  //   const id = Number(this.route.snapshot.paramMap.get('id'));
-  //   this.vehicleService.getVehicleById(id).subscribe(data => {
-  //     console.log("All vehicles:", data);
-  //     console.log("Route ID:", id);
-  //     this.vehicle = data;
-  //     console.log("Selected vehicle:", this.vehicle);
-  //   });
-  // }
-// this.vehicleService.getVehicles().subscribe(data => {
-//   this.vehicle = data.find(v => Number(v.id) === id);
-// });

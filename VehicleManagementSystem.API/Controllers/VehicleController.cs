@@ -9,7 +9,6 @@ namespace VehicleManagementSystem.API.Controllers;
 public class VehicleController : ControllerBase
 {
     private readonly IVehicleService _service;
-
     public VehicleController(IVehicleService service)
     {
         _service = service;
@@ -28,7 +27,7 @@ public class VehicleController : ControllerBase
         return result == null ? NotFound() : Ok(result);
     }
 
-    [HttpPost]
+    [HttpPost] // POST: api/vehicle
     public async Task<IActionResult> Create([FromForm] VehicleCreateDto dto)
     {
         var result = await _service.CreateAsync(dto);
