@@ -1,7 +1,9 @@
 <div *ngIf="vehicle as v; else noData" class="details-container">
+  
   <div class="img-container">
     <img class="product-img" [src]="'http://localhost:5248' + vehicle.imageUrl" alt="vehicle image"/>
   </div>
+
   <section class="details-info">
     <p class="brandText">{{v.brand}}</p>
     <p class="priceText">Rs. {{v.price.toLocaleString()}}</p>
@@ -33,24 +35,6 @@
         </tr>
       </tbody>
     </table>
-    <!-- <div class="model det">
-      <h3>Model: </h3> <p>{{v.model}}</p>
-    </div>
-    <div class="year det">
-      <h3>Year Model: </h3> <p>{{v.year}}</p>
-    </div>
-    <div class="color det">
-      <h3>Color: </h3> <p>{{v.color}}</p>
-    </div>
-    <div class="registrationNumber det">
-      <h3>Registration Number: </h3> <p>{{v.registrationNumber}}</p>
-    </div>
-    <div class="fuelType det">
-      <h3>Fuel Type: </h3> <p>{{v.fuelType}}</p>
-    </div>
-    <div class="mileage det">
-      <h3>Mileage: </h3> <p>{{v.mileage}}</p>
-    </div> -->
   </section>
 
 </div>

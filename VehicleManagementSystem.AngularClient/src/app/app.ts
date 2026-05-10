@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { RouterOutlet, RouterLink } from '@angular/router';
 
 @Component({
@@ -9,6 +8,4 @@ import { RouterOutlet, RouterLink } from '@angular/router';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
-
-}
+export class App {}

@@ -55,9 +55,9 @@
 .vehicle-specs-table th {
   text-align: left;
   padding: 8px 0;
-  font-size: 1.17em; /* Matches H3 size roughly */
+  font-size: 1.17em; 
   color: #333;
-  width: 40%; /* Adjust width of labels */
+  width: 40%;
 }
 
 .vehicle-specs-table td {
@@ -65,10 +65,10 @@
   color: #666;
   font-weight: 600;
 }
-/* Optional: Add a light border between rows for readability */
 .vehicle-specs-table tr {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
+
 
 @media (max-width: 1480px) {
     .details-container {

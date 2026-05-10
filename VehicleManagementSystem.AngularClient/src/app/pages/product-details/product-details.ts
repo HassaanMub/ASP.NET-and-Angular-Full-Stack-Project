@@ -13,7 +13,6 @@ import { VehicleService } from '../../services/vehicle';
 })
 export class ProductDetails implements OnInit {
 
-  // vehicle?: Vehicle;
   vehicle: Vehicle | null = null;
 
   constructor(

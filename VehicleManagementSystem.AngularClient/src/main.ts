@@ -4,6 +4,8 @@ import { appConfig } from './app/app.config';
 
 bootstrapApplication(App, appConfig);
 
+
+// Old Data
 // import { bootstrapApplication } from '@angular/platform-browser';
 // import { provideRouter } from '@angular/router';
 // import { provideHttpClient } from '@angular/common/http';
