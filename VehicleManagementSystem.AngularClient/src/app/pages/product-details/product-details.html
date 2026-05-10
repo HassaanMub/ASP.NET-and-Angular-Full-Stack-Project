@@ -1,15 +1,58 @@
 <div *ngIf="vehicle as v; else noData" class="details-container">
-  <img [src]="'http://localhost:5248' + vehicle.imageUrl" alt="vehicle image" />
-  <div class="details-info">
-    <h1>{{ v.brand }}</h1>
-    <h2>{{ v.model }}</h2>
-    <h3>Rs. {{ v.price.toLocaleString() }}</h3>
-    <p><strong>Year:</strong> {{ v.year }}</p>
-    <p><strong>Fuel:</strong> {{ v.fuelType }}</p>
-    <p><strong>Color:</strong> {{ v.color }}</p>
-    <p><strong>Mileage:</strong> {{ v.mileage }}</p>
-    <p><strong>Reg:</strong> {{ v.registrationNumber }}</p>
+  <div class="img-container">
+    <img class="product-img" [src]="'http://localhost:5248' + vehicle.imageUrl" alt="vehicle image"/>
   </div>
+  <section class="details-info">
+    <p class="brandText">{{v.brand}}</p>
+    <p class="priceText">Rs. {{v.price.toLocaleString()}}</p>
+    <table class="vehicle-specs-table">
+      <tbody>
+        <tr>
+          <th>Model:</th>
+          <td>{{v.model}}</td>
+        </tr>
+        <tr>
+          <th>Year Model:</th>
+          <td>{{v.year}}</td>
+        </tr>
+        <tr>
+          <th>Color:</th>
+          <td>{{v.color}}</td>
+        </tr>
+        <tr>
+          <th>Registration:</th>
+          <td>{{v.registrationNumber}}</td>
+        </tr>
+        <tr>
+          <th>Fuel Type:</th>
+          <td>{{v.fuelType}}</td>
+        </tr>
+        <tr>
+          <th>Mileage:</th>
+          <td>{{v.mileage}} km</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- <div class="model det">
+      <h3>Model: </h3> <p>{{v.model}}</p>
+    </div>
+    <div class="year det">
+      <h3>Year Model: </h3> <p>{{v.year}}</p>
+    </div>
+    <div class="color det">
+      <h3>Color: </h3> <p>{{v.color}}</p>
+    </div>
+    <div class="registrationNumber det">
+      <h3>Registration Number: </h3> <p>{{v.registrationNumber}}</p>
+    </div>
+    <div class="fuelType det">
+      <h3>Fuel Type: </h3> <p>{{v.fuelType}}</p>
+    </div>
+    <div class="mileage det">
+      <h3>Mileage: </h3> <p>{{v.mileage}}</p>
+    </div> -->
+  </section>
+
 </div>
 <ng-template #noData>
   <p>Vehicle Not Loaded</p>

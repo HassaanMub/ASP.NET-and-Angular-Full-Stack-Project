@@ -2,15 +2,88 @@
     display:flex;
     gap:40px;
     padding:40px;
-    align-items:flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
 }
-.details-container img{
-    width:500px;
-    border-radius:20px;
+.img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-img{
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
 }
 .details-info{
-    background:white;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(0, 0, 0, 0.25);
     padding:30px;
     border-radius:20px;
-    width:500px;
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.det{
+    display: flex;
+    gap: 8px;
+}
+
+.priceText{
+    font-weight: bolder;
+    font-size: 30px;
+    color: black;
+}
+.brandText{
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+/* Table Styling */
+.vehicle-specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.vehicle-specs-table th {
+  text-align: left;
+  padding: 8px 0;
+  font-size: 1.17em; /* Matches H3 size roughly */
+  color: #333;
+  width: 40%; /* Adjust width of labels */
+}
+
+.vehicle-specs-table td {
+  padding: 8px 0;
+  color: #666;
+  font-weight: 600;
+}
+/* Optional: Add a light border between rows for readability */
+.vehicle-specs-table tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1480px) {
+    .details-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .details-info{
+        width: 100%;
+    }
+    .img-container{
+        width: 100%;
+    }
+}
+@media (max-width: 580px) {
+    .details-info{
+        min-width: 200px;
+    }
 }

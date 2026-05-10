@@ -1,4 +1,19 @@
-<div class="vehicle-container">
+<div class="vehicle-container" [ngClass]="viewMode">
+  <div class="vehicle-card" *ngFor="let vehicle of vehicles" [routerLink]="['/products', vehicle.id]">
+    <img *ngIf="vehicle.imageUrl" [src]="'http://localhost:5248' + vehicle.imageUrl" alt="vehicle image" />
+    <div class="vehicle-info">
+      <h2 class="price"> Rs. {{ vehicle.price.toLocaleString() }} </h2>
+      <h3 class="brand">
+        {{ vehicle.brand }}
+        <span>-</span>
+        <span class="model"> {{ vehicle.model }} </span>
+      </h3>
+      <p class="time"> {{ vehicle.createdAt }} </p>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="vehicle-container">
   <div class="vehicle-card" *ngFor="let vehicle of vehicles" [routerLink]="['/products', vehicle.id]">
     <img *ngIf="vehicle.imageUrl" [src]="'http://localhost:5248' + vehicle.imageUrl"/>
     <div class="vehicle-info">
@@ -15,4 +30,4 @@
       </p>
     </div>
   </div>
-</div>
+</div> -->
