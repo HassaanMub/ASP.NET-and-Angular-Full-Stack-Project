@@ -1,42 +1,45 @@
 <div *ngIf="vehicle as v; else noData" class="details-container">
-  
-  <div class="img-container">
-    <img class="product-img" [src]="'http://localhost:5248' + vehicle.imageUrl" alt="vehicle image"/>
+  <div class="container-1">
+    <a routerLink="/products" class="backBtn"><i class="fa-solid fa-arrow-left"></i></a>
   </div>
+  <div class="container-2">
+    <div class="img-container">
+      <img class="product-img" [src]="'http://localhost:5248' + vehicle.imageUrl" alt="vehicle image" />
+    </div>
 
-  <section class="details-info">
-    <p class="brandText">{{v.brand}}</p>
-    <p class="priceText">Rs. {{v.price.toLocaleString()}}</p>
-    <table class="vehicle-specs-table">
-      <tbody>
-        <tr>
-          <th>Model:</th>
-          <td>{{v.model}}</td>
-        </tr>
-        <tr>
-          <th>Year Model:</th>
-          <td>{{v.year}}</td>
-        </tr>
-        <tr>
-          <th>Color:</th>
-          <td>{{v.color}}</td>
-        </tr>
-        <tr>
-          <th>Registration:</th>
-          <td>{{v.registrationNumber}}</td>
-        </tr>
-        <tr>
-          <th>Fuel Type:</th>
-          <td>{{v.fuelType}}</td>
-        </tr>
-        <tr>
-          <th>Mileage:</th>
-          <td>{{v.mileage}} km</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
+    <section class="details-info">
+      <p class="brandText">{{v.brand}}</p>
+      <p class="priceText">Rs. {{v.price.toLocaleString()}}</p>
+      <table class="vehicle-specs-table">
+        <tbody>
+          <tr>
+            <th>Model:</th>
+            <td>{{v.model}}</td>
+          </tr>
+          <tr>
+            <th>Year Model:</th>
+            <td>{{v.year}}</td>
+          </tr>
+          <tr>
+            <th>Color:</th>
+            <td>{{v.color}}</td>
+          </tr>
+          <tr>
+            <th>Registration:</th>
+            <td>{{v.registrationNumber}}</td>
+          </tr>
+          <tr>
+            <th>Fuel Type:</th>
+            <td>{{v.fuelType}}</td>
+          </tr>
+          <tr>
+            <th>Mileage:</th>
+            <td>{{v.mileage}} km</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
 </div>
 <ng-template #noData>
   <p>Vehicle Not Loaded</p>
